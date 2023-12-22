@@ -5,7 +5,7 @@ import gradio
 my_api_key = "paste your API key here"
 openai.api_key = my_api_key
 
-def customGPT(role, user_input):
+def interactiveGPT(role, user_input):
     messages = [{"role": "system", "content": role}]
 
     messages.append({"role": "user", "content": user_input})
@@ -26,10 +26,10 @@ def customGPT(role, user_input):
         return "An error occurred, please try again later."
 
 demo = gradio.Interface(
-    fn=customGPT,
+    fn=cinteractiveGPT,
     inputs=["text", "text"], 
     outputs="text",
-    title="Custom GPT"
+    title="GPT Interface"
 )
 
 demo.launch(share=True)
