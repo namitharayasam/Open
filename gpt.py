@@ -2,7 +2,7 @@ import os
 import openai
 import gradio
 
-my_api_key = "paste your api key here"
+my_api_key = "paste your API key here"
 openai.api_key = my_api_key
 
 def customGPT(role, user_input):
